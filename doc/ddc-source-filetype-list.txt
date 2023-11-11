@@ -1,0 +1,42 @@
+*ddc-source-filetype-list.txt*	filetype-list source for ddc.vim
+
+Author: hokorobi <hokorobi.hokorobi at gmail.com>
+License: MIT license
+
+CONTENTS				*ddc-source-filetype-list-contents*
+
+Introduction		|ddc-source-filetype-list-introduction|
+Install			|ddc-source-filetype-list-install|
+Examples		|ddc-source-filetype-list-examples|
+
+
+==============================================================================
+INTRODUCTION				*ddc-source-filetype-list-introduction*
+
+Use text files of filetype under the rc folder as completion candidates.
+
+autohotkey.txt using ahk2.standard.api in
+https://github.com/fincs/SciTE4autohotkey/ .
+
+
+==============================================================================
+INSTALL					*ddc-source-filetype-list-install*
+
+Please install "ddc.vim", "denops.vim"
+
+https://github.com/Shougo/ddc.vim
+https://github.com/vim-denops/denops.vim
+
+
+==============================================================================
+EXAMPLES				*ddc-source-filetype-list-examples*
+>
+	call ddc#custom#patch_global('sources', ['filetype-list'])
+	
+	call ddc#custom#patch_global('sourceOptions', #{
+	      \   filetype-list: #{ mark: 'X' },
+	      \ })
+<
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:noet:

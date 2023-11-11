@@ -1,0 +1,29 @@
+name: Deno test
+
+on:
+  schedule:
+    - cron: "0 9 * * 6"
+  push:
+    branches:
+      - master
+    paths:
+      - "**/*.ts"
+      - ".github/workflows/deno-test.yml"
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: git config --global core.autocrlf false
+        if: runner.os == 'Windows'
+      - uses: actions/checkout@v3
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: "${{ matrix.version }}"
+      - name: Type check
+        run: deno task check
