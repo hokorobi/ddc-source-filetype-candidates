@@ -13,11 +13,12 @@ Examples		|ddc-source-filetype-list-examples|
 ==============================================================================
 INTRODUCTION				*ddc-source-filetype-list-introduction*
 
-Use text files of filetype under the rc folder as completion candidates.
+This source collects from text files for each filetype under the "rc" folder.
 
-autohotkey.txt using ahk2.standard.api in
+* autohotkey.txt: using ahk2.standard.api in
 https://github.com/fincs/SciTE4autohotkey/ .
 
+* plantuml.txt: output "plantuml.jar -language"
 
 ==============================================================================
 INSTALL					*ddc-source-filetype-list-install*
