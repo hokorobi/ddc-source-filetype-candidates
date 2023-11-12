@@ -1,6 +1,6 @@
 {
   "lock": false,
   "tasks": {
-    "check": "deno check --unstable denops/@ddc-sources/filetype-list.ts"
+    "check": "deno check --unstable denops/@ddc-sources/filetype-candidates.ts"
   }
 }

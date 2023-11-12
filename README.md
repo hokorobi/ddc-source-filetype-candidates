@@ -1,1 +1,1 @@
-See [doc](doc/ddc-source-autohotkey.txt).
+See [doc](doc/ddc-source-filetype-candidates.txt).

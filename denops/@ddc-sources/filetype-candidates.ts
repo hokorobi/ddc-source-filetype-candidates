@@ -16,7 +16,7 @@ export class Source extends BaseSource<Params> {
   override async onInit(args: {
     denops: Denops,
   }): Promise<void> {
-    const candidatesfiles = await vars.g.get(args.denops, "ddc_source_filetype_list_files", {}) as {[name: string]: string};
+    const candidatesfiles = await vars.g.get(args.denops, "ddc_source_filetype_candidates_files", {}) as {[name: string]: string};
     const filetype = await vars.options.get(args.denops, "filetype") as string;
     const data = Deno.readFileSync(new URL(toFileUrl(candidatesfiles[filetype]), import.meta.url));
     const lines = new TextDecoder().decode(data).split(/\r?\n/);
