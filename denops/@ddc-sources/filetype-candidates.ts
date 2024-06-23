@@ -1,12 +1,12 @@
 import {
   BaseSource,
   Item,
-} from "https://deno.land/x/ddc_vim@v5.0.0/types.ts";
+} from "https://deno.land/x/ddc_vim@v5.0.1/types.ts";
 import {
   Denops,
   vars,
   toFileUrl,
-} from "https://deno.land/x/ddc_vim@v5.0.0/deps.ts";
+} from "https://deno.land/x/ddc_vim@v5.0.1/deps.ts";
 
 type Params = Record<never, never>;
 
