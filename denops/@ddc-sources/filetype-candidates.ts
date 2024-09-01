@@ -6,7 +6,7 @@ import {
 import {
   toFileUrl,
 } from "jsr:@std/path@~1.0.2/to-file-url";
-import * as vars from "jsr:@denops/std@~7.0.1/variable";
+import * as vars from "jsr:@denops/std@~7.1.0/variable";
 
 
 type Params = Record<never, never>;
