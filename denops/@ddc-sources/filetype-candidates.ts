@@ -2,7 +2,7 @@ import {
   BaseSource,
   Denops,
   Item,
-} from "jsr:@shougo/ddc-vim@~6.0.0/types";
+} from "jsr:@shougo/ddc-vim@~7.0.0/types";
 import {
   toFileUrl,
 } from "jsr:@std/path@~1.0.2/to-file-url";
