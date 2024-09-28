@@ -1,6 +1,6 @@
 import type { Denops } from "jsr:@denops/std@~7.2.0";
-import { Item } from "jsr:@shougo/ddc-vim@~7.0.0/types";
-import { BaseSource } from "jsr:@shougo/ddc-vim@~7.0.0/source";
+import { Item } from "jsr:@shougo/ddc-vim@~7.1.0/types";
+import { BaseSource } from "jsr:@shougo/ddc-vim@~7.1.0/source";
 import { toFileUrl } from "jsr:@std/path@~1.0.2/to-file-url";
 import * as vars from "jsr:@denops/std@~7.2.0/variable";
 
