@@ -2,6 +2,9 @@
   "lock": false,
   "tasks": {
     "check": "deno check denops/@ddc-sources/filetype-candidates.ts",
+    "fmt": "deno fmt denops/@ddc-sources",
+    "fmt": "deno lint denops/@ddc-sources",
+    "fmt": "deno lint --fix denops/@ddc-sources",
     "upgrade": "deno run -A jsr:@molt/cli denops/**/*.ts --write"
   }
 }
