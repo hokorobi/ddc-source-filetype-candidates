@@ -1,6 +1,7 @@
 {
   "lock": false,
   "tasks": {
-    "check": "deno check denops/@ddc-sources/filetype-candidates.ts"
+    "check": "deno check denops/@ddc-sources/filetype-candidates.ts",
+    "upgrade": "deno run -A jsr:@molt/cli denops/**/*.ts --write"
   }
 }
