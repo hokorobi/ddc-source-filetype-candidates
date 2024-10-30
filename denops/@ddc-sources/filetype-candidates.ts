@@ -1,9 +1,8 @@
-import type { Denops } from "jsr:@denops/std@~7.2.0";
+import type { Denops } from "jsr:@denops/std@~7.3.0";
 import { Item } from "jsr:@shougo/ddc-vim@~7.1.0/types";
 import { BaseSource } from "jsr:@shougo/ddc-vim@~7.1.0/source";
 import { toFileUrl } from "jsr:@std/path@~1.0.2/to-file-url";
-import * as vars from "jsr:@denops/std@~7.2.0/variable";
-
+import * as vars from "jsr:@denops/std@~7.3.0/variable";
 
 type Params = Record<never, never>;
 
@@ -11,11 +10,17 @@ export class Source extends BaseSource<Params> {
   _cache: Item[] = [];
 
   override async onInit(args: {
-    denops: Denops,
+    denops: Denops;
   }): Promise<void> {
-    const candidatesfiles = await vars.g.get(args.denops, "ddc_source_filetype_candidates_files", {}) as {[name: string]: string};
+    const candidatesfiles = await vars.g.get(
+      args.denops,
+      "ddc_source_filetype_candidates_files",
+      {},
+    ) as { [name: string]: string };
     const filetype = await vars.options.get(args.denops, "filetype") as string;
-    const data = Deno.readFileSync(new URL(toFileUrl(candidatesfiles[filetype]), import.meta.url));
+    const data = Deno.readFileSync(
+      new URL(toFileUrl(candidatesfiles[filetype]), import.meta.url),
+    );
     const lines = new TextDecoder().decode(data).split(/\r?\n/);
     this._cache = [...new Set(lines)]
       .filter((line) => line.length != 0)
