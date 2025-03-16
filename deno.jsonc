@@ -4,6 +4,7 @@
     "check": "deno check denops/**/*.ts",
     "fmt": "deno fmt",
     "lint": "deno lint",
+    "lintactions": "actionlint",
     "lintfix": "deno lint --fix",
     "upgrade": "deno run -A jsr:@molt/cli denops/**/*.ts --write"
   }
