@@ -1,8 +1,8 @@
-import type { Denops } from "jsr:@denops/std@~7.6.0";
-import { Item } from "jsr:@shougo/ddc-vim@~9.5.0/types";
-import { BaseSource } from "jsr:@shougo/ddc-vim@~9.5.0/source";
+import type { Denops } from "jsr:@denops/std@~8.0.0";
+import { Item } from "jsr:@shougo/ddc-vim@~10.0.0/types";
+import { BaseSource } from "jsr:@shougo/ddc-vim@~10.0.0/source";
 import { toFileUrl } from "jsr:@std/path@~1.1.0/to-file-url";
-import * as vars from "jsr:@denops/std@~7.6.0/variable";
+import * as vars from "jsr:@denops/std@~8.0.0/variable";
 
 type Params = Record<never, never>;
 
